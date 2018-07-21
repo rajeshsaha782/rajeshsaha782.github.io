@@ -91,8 +91,12 @@ I prefer to write clean code that is well structured and follows standards. I le
       <div class="container">
         <div class="content-section-heading">
           <h2 class="text-secondary mb-0">My skills</h2>
-          <h5 class="mb-5">Working...</h5>
+        
+		  <canvas style="background-color:white" id="bar-chart" width="800" height="450"></canvas>
+		  
+		  
         </div>
+		<br/>
          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#education">Education</a>
       </div>
     </section>
@@ -224,6 +228,32 @@ I completed my HSC in science group from Narayanganj Tolaram college. And I comp
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.min.js"></script>
 
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: {
+      labels: ["HTML", "CSS", "JavaScript+JQuery", "ASP.Net", "PHP", "C/C++","Nodejs","Java","C#"],
+      datasets: [
+        {
+          label: "Skill",
+          backgroundColor: ["#3e95cd","#3e9ea4", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#8e7ea5","#8cba3f","#3e9ea4"],
+          data: [3900,1230,3200,4050,3850,3115,2700,2686,3017]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'My skills'
+      }
+    }
+});
+</script>
+	
   </body>
 
 </html>
