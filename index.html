@@ -22,7 +22,13 @@
     <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 
   </head>
+ <style>
 
+      #map {
+        height: 60%;
+      }
+ 
+    </style>
   <body id="page-top">
     <!-- Navigation -->
     <a class="menu-toggle rounded" href="#">
@@ -211,6 +217,24 @@ I completed my HSC in science group from Narayanganj Tolaram college. And I comp
         <a href="#about" class="btn btn-xl btn-dark">Look at Me!</a>
       </div>
     </section>
+	
+	 <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+	  var latlng = {lat: 23.606563, lng: 90.502895};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 23.606563, lng: 90.502895},
+          zoom: 14
+        });
+		var marker = new google.maps.Marker({
+            position: latlng,
+            map: map
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6PfzusjGCzRcG1S1zd34WUZZ3y-Dg6lk&libraries&callback=initMap"
+    async defer></script>
 
     <!-- Map -->
     <!-- <section id="contact" class="map">
@@ -225,17 +249,22 @@ I completed my HSC in science group from Narayanganj Tolaram college. And I comp
     <footer class="footer text-center">
       <div class="container">
         <ul class="list-inline mb-5">
-          <li class="list-inline-item">
+		<li class="list-inline-item" title="E-mail">
+            <a class="social-link rounded-circle text-white mr-3" href="mailto:rajeshsaha782@gmail.com">
+              <i class="fa fa-envelope fa-fw"></i>
+            </a>
+          </li>
+          <li class="list-inline-item" title="Facebook">
             <a class="social-link rounded-circle text-white mr-3" href="https://facebook.com/rajesh.saha.1996" target="_blank">
               <i class="icon-social-facebook"></i>
             </a>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" title="Linkedin">
             <a class="social-link rounded-circle text-white mr-3" href="https://linkedin.com/in/rajesh-saha-1b76ba15b/" target="_blank">
               <i class="icon-social-linkedin"></i>
             </a>
           </li>
-          <li class="list-inline-item">
+          <li class="list-inline-item" title="Github">
             <a class="social-link rounded-circle text-white" href="https://github.com/rajeshsaha782" target="_blank">
               <i class="icon-social-github"></i>
             </a>
