@@ -64,12 +64,12 @@
     <!-- Header -->
     <header class="masthead d-flex">
       <div class="container text-center my-auto">
-	  <img src="img/icon1.png"/>
+	  <img src="img/icon2.png"/>
         <h1 class="mb-1">Hi I'm Rajesh</h1>
         <h3 class="mb-5">
           <em>I'm a programmer.I feel very comfortable when someone gives me a nice UI.</em>
         </h3>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">About ME</a>
+        <a class="btn btn-info btn-xl js-scroll-trigger" href="#about">About ME</a>
       </div>
       <div class="overlay"></div>
     </header>
@@ -233,8 +233,16 @@ I completed my HSC in science group from Narayanganj Tolaram college. And I comp
             position: latlng,
 			animation: google.maps.Animation.DROP,
             map: map,
-			title: 'My Address'
+			title: 'My Address',
+			
         });
+		
+		var infoWindow = new google.maps.InfoWindow({
+            content: 'NETAIGANJ MOOR,NARAYANGANJ'
+          });
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
 		
       }
     </script>
