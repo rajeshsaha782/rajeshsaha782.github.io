@@ -1223,45 +1223,36 @@
 
 
 				<div class="modal fade" id="loginmodal" role="dialog" style="padding-top:50px;">
-		<div class="modal-dialog modal-sm">
+		<div class="modal-dialog modal-md">
 			<div class="modal-content">
 				
 				<div class="modal-body" >
+					<form class="form-signin">
+		              <div class="form-label-group">
+		              	<label for="inputEmail">Email address</label>
+		                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+		                
+		              </div>
+
+		              <div class="form-label-group">
+		              	<label for="inputPassword">Password</label>
+		                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+		                
+		              </div>
+		              <br/>
+		              <a class="btn btn-danger btn-block" href="dashboard.html">Login as Customer</a>
+					  <a class="btn btn-success btn-block" href="admin/index.html">Login as Admin</a>
+		              <!-- <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" >Sign in</button> -->
+		              <hr class="my-4">
+					  <!--
+		              <div class="text-center">
+		                <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+		              </div>-->
+		            </form>
 					
-					<table class="table table-striped  ">
-						
-						<tbody>
-							
-							<tr>
-								<th>Email</th>
-								<td><input type="text"></input></td>
-								
-							</tr>
-							<tr>
-								<th>Password</th>
-								<td><input type="password"></input></td>
-								
-							</tr>
-							
-							<tr>
-								
-								<td colspan="2">
-								<hr>
-								</td>
-								
-							</tr>
-							<tr>
-								<td colspan="2">Not A Member Yet??&nbsp;&nbsp;&nbsp;<a data-toggle="modal" data-target="#signupModal"><button type="button" id="sign" class="btn btn-info" >Sign Up</button></a> </td>
-								
-							</tr>
-							
-						</tbody>
-					</table>
 					
 				</div>
-				<div class="modal-footer">
-					<a href="dashboard.html"><button type="button" id="login" class="btn btn-info" >Log In</button></a>
-				</div>
+				
 			</div>
 		</div>
 	</div>
