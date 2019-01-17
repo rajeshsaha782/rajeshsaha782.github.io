@@ -334,5 +334,10 @@ new Chart(document.getElementById("bar-chart"), {
 </script>
 	
   </body>
-<script>mixpanel.track("Video play");</script>
+<script>
+	mixpanel.track(
+        "Page Viewed",
+        {"Page Name": "index"}
+    );
+	</script>
 </html>
